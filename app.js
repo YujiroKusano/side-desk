@@ -5,6 +5,7 @@ const PORT = 3000;
 app.use(express.json());
 app.use(express.urlencoded( { extended: true }));
 
+// curl http://localhost:3000/name/kusano
 app.get("/name/:name", (req, res) => {
   console.log(req.params.name);
   res.status(200).send("Hello" + " " + req.params.name);
